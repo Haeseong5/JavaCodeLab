@@ -1,4 +1,5 @@
 package design.SingletonePattern.printer;
 
-public class Printer {
+public interface Printer {
+    public void print(String str);
 }
