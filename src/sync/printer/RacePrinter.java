@@ -5,7 +5,7 @@ public class RacePrinter implements Printer {
     private RacePrinter(){}
     private int count = 0;
 
-    //synchronized 는 객체에 lock 을 거는 것.
+    //synchronized 는 객체에 lock 을 거는 것. 임계구역을 설정하는 것.
     //객체에 lock 이 걸리기 때문에 동시에 호출할 수 없다.
     public static Printer getPrinter(){
         if (printer == null){
