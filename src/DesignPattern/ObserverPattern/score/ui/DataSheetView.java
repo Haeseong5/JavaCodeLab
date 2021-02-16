@@ -1,4 +1,7 @@
-package DesignPattern.ObserverPattern.score;
+package DesignPattern.ObserverPattern.score.ui;
+
+import DesignPattern.ObserverPattern.score.Observer;
+import DesignPattern.ObserverPattern.score.ScoredRecord;
 
 import javax.xml.crypto.Data;
 import java.util.List;
@@ -15,6 +18,7 @@ public class DataSheetView implements Observer {
         this.viewCount = viewCount;
     }
 
+    @Override
     public void update() { //점수의 변경을 통보받음
         List<Integer> record = scoredRecord.getScoreRecord(); //변경된 scores 리스트를 얻어서 표시
         displayScores(record);

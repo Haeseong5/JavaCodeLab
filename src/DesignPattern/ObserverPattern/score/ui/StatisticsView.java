@@ -1,8 +1,11 @@
-package DesignPattern.ObserverPattern.score;
+package DesignPattern.ObserverPattern.score.ui;
+
+import DesignPattern.ObserverPattern.score.Observer;
+import DesignPattern.ObserverPattern.score.ScoredRecord;
 
 import java.util.List;
 
-public class StatisticsView implements Observer{
+public class StatisticsView implements Observer {
 
     ScoredRecord scoredRecord;
 

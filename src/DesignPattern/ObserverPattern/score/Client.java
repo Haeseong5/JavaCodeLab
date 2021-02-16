@@ -1,5 +1,9 @@
 package DesignPattern.ObserverPattern.score;
 
+import DesignPattern.ObserverPattern.score.ui.DataSheetView;
+import DesignPattern.ObserverPattern.score.ui.MinMaxView;
+import DesignPattern.ObserverPattern.score.ui.StatisticsView;
+
 /**
  * [문제점]
  * 데이터의 통보대상이 변경된 것을 반영하기 위해 ScoredRecord 클래스의 코드를 수정해야 한다.

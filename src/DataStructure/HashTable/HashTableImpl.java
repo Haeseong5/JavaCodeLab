@@ -26,6 +26,7 @@ public class HashTableImpl {
 
         for (char c : key.toCharArray()) {
             hashCode += (long) c;
+            System.out.println(hashCode);
         }
         return hashCode;
     }
@@ -54,6 +55,7 @@ public class HashTableImpl {
             table[index].add(new Node(key, value));
         }
         else {
+            // 해당 인덱스에 이미 데이터가 존재하면, 링크드리스트에 데이터 추가
             Node searched = searchNode(index, key);
 
             if (searched != null) { searched.value = value; }
