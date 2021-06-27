@@ -1,4 +1,4 @@
-package Callback.callback;
+package DesignPattern.CallbackPattern;
 
 /**
  * 콜백 구현은 A클래스에서 동작할 수 없고 B클래스에서만 동작할 수 있는 메서드를  A클래스에서 인터페이스로 선언하여 B클래스에서 정의하고 A측에서 호출할 수 있도록 한다.
@@ -7,22 +7,39 @@ package Callback.callback;
  */
 public class Controller {
     public static void main(String[] args) {
+        System.out.println("start");
+
         Callback callback = new Callback() {
             @Override
-            public void onSuccess(DataResponse dataResponse) {
+            public void onSuccess(Response dataResponse) {
                 System.out.println(dataResponse.code);
                 System.out.println(dataResponse.message);
             }
 
             @Override
-            public void onFailure(DataResponse dataResponse) {
+            public void onFailure(Response dataResponse) {
                 System.out.println(dataResponse.code);
                 System.out.println(dataResponse.message);
             }
         };
 
+
         Callee callee = new Callee();
         callee.setCallback(callback);
-        callee.execute();
+
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    Thread.sleep(1000L);
+                    callee.execute();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+        System.out.println("end");
     }
 }

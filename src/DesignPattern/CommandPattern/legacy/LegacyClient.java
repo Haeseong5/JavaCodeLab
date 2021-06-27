@@ -30,8 +30,8 @@ class Button{
 
     public void pressed(){
         switch (theMode){
-            case LAMP -> theLamp.turnOn();
-            case ALARM -> theAlarm.start();
+            case LAMP : theLamp.turnOn();
+            case ALARM : theAlarm.start();
         }
     }
 }

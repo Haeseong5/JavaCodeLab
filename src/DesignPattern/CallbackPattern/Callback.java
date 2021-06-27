@@ -1,4 +1,4 @@
-package Callback.callback;
+package DesignPattern.CallbackPattern;
 
 /**
  콜백함수란
@@ -6,6 +6,6 @@ package Callback.callback;
  * 2. 어떤 이벤트에 의해 호출되어지는 함수.
  */
 public interface Callback {
-    public void onSuccess(DataResponse dataResponse);
-    public void onFailure(DataResponse dataResponse);
+    public void onSuccess(Response dataResponse);
+    public void onFailure(Response dataResponse);
 }
